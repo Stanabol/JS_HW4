@@ -7,10 +7,16 @@ function time(a = +prompt("Введите часы"), b = +prompt("Введит�
     if (b == 0) {
         b = "00"
     }
+    if (b < 10) {
+        b = "0" + b
+    }
     if (c == 0) {
         c = "00"
     }
-    return `${a}:${b}:${c}`
+    if (c < 10) {
+        c = "0" + c
+    }
+    return `${a}ч:${b}м:${c}с`
 
 }
 alert(time());
